@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
   <title>ALLEN KS | Dubstep Wacho</title>
   <meta name="description" content="ALLEN KS aka Dubstep Wacho. DJ, productor, promotor, creador de Otra Noche y director de Spartans Label." />
 
@@ -886,10 +890,2015 @@
         font-size: 10px;
       }
     }
+  
+    /* ===============================
+      AJUSTES V3
+    =============================== */
+
+    .top-ticker {
+      position: sticky;
+      top: 0;
+      z-index: 220;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(90deg, var(--redDark), var(--red), var(--red2));
+      border-bottom: 1px solid rgba(255,255,255,.16);
+      color: white;
+      font-size: 11px;
+      font-weight: 1000;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMove 28s linear infinite;
+    }
+
+    .ticker-track span {
+      padding-right: 34px;
+    }
+
+    @keyframes tickerMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .topbar {
+      top: 26px;
+    }
+
+    .hero::before,
+    .hero::after,
+    .page-hero::before,
+    .page-hero::after {
+      display: none;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 16% 18%, rgba(229,9,20,.36), transparent 34%),
+        linear-gradient(180deg, rgba(76,0,4,.76), rgba(3,3,3,.96));
+    }
+
+    .signal {
+      border-color: rgba(229,9,20,.38);
+      background: rgba(229,9,20,.09);
+      color: var(--white);
+    }
+
+    .signal::before {
+      background: var(--red);
+      box-shadow: 0 0 16px var(--red);
+    }
+
+    .media-panel {
+      background: linear-gradient(180deg, #eeeeee 0%, #d8d8d8 100%);
+      color: #111;
+      border-color: rgba(255,255,255,.36);
+      box-shadow: 0 34px 100px rgba(0,0,0,.28);
+    }
+
+    .media-panel .tabs-head {
+      border-bottom: 1px solid rgba(0,0,0,.13);
+    }
+
+    .media-panel .tab-btn {
+      background: #f7f7f7;
+      color: #111;
+      border-color: rgba(0,0,0,.18);
+    }
+
+    .media-panel .tab-btn.active {
+      color: white;
+      background: linear-gradient(90deg, var(--redDark), var(--red), var(--red2));
+      border-color: transparent;
+    }
+
+    .media-panel .section-title h2 {
+      color: #111;
+      text-shadow: none;
+    }
+
+    .media-panel .section-title p {
+      color: #555;
+    }
+
+    .media-panel .slide {
+      background: white;
+      color: #111;
+      border-color: rgba(0,0,0,.14);
+      box-shadow: 0 18px 40px rgba(0,0,0,.08);
+    }
+
+    .media-panel .slide-info p {
+      color: #5f5f5f;
+    }
+
+    .media-panel .embed-credit,
+    .media-panel .embed-credit a {
+      color: #555;
+    }
+
+    .compact-copy {
+      max-width: 560px;
+    }
+
+    .price-card {
+      width: min(360px, 100%);
+      margin: 18px 0 20px;
+      padding: 18px;
+      border: 1px solid rgba(157,255,0,.28);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(157,255,0,.11), rgba(229,9,20,.08)),
+        rgba(255,255,255,.045);
+    }
+
+    .price-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 1000;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .price-card strong {
+      display: block;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: .9;
+      letter-spacing: -.06em;
+    }
+
+    .price-card small {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 13px;
+    }
+
+    .offer-grid,
+    .contact-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .offer-item,
+    .contact-card {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .offer-item h3,
+    .contact-card strong {
+      display: block;
+      margin: 4px 0 8px;
+      font-size: 24px;
+      line-height: .95;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .offer-item p,
+    .contact-card p {
+      color: var(--muted);
+      line-height: 1.48;
+      font-size: 14px;
+    }
+
+    .label-soundcloud {
+      margin-top: 22px;
+    }
+
+    .contact-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 20px;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(229,9,20,.54);
+      transform: translateY(-2px);
+      transition: .2s ease;
+    }
+
+    footer::after {
+      content: " · ALLENKS.COM.AR";
+    }
+
+    @media (max-width: 980px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .top-ticker {
+        height: 24px;
+        font-size: 10px;
+      }
+
+      .topbar {
+        top: 24px;
+      }
+
+      .media-panel .section-title h2 {
+        font-size: clamp(40px, 18vw, 70px);
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V4: tipografías modernas, sin verde, foto centrada
+    =============================== */
+
+    :root {
+      --lime: #f2eee8;
+      --cream: #f2eee8;
+      --cream2: #d8d2cc;
+      --accent-soft: #b9b2ad;
+      --font-title: "Anton", Impact, sans-serif;
+      --font-body: "Inter", Arial, sans-serif;
+      --font-ui: "Space Grotesk", "Inter", Arial, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+    }
+
+    .brand,
+    .nav-btn,
+    .tab-btn,
+    .btn,
+    .signal,
+    .aka,
+    .pill,
+    .ticker-track,
+    .label,
+    .price-card span {
+      font-family: var(--font-ui);
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-weight: 400;
+      letter-spacing: -.025em;
+      line-height: .78;
+      text-shadow:
+        7px 7px 0 rgba(229, 9, 20, .76),
+        0 24px 70px rgba(0,0,0,.45);
+    }
+
+    h2,
+    .block-title,
+    .page-title,
+    .section-title h2,
+    .project-card h3,
+    .ticket h3,
+    .slide-info h3,
+    .offer-item h3,
+    .contact-card strong {
+      font-family: var(--font-title);
+      font-weight: 400;
+      letter-spacing: -.018em;
+    }
+
+    .description {
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: #e7e1dc;
+    }
+
+    .description strong {
+      color: var(--cream);
+      text-shadow: none;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 1px;
+    }
+
+    .profile-img {
+      object-position: 50% center;
+      transform: scale(.97);
+      background: #111;
+    }
+
+    .profile-card {
+      place-items: center;
+      padding: 26px;
+    }
+
+    .profile-card::after {
+      color: rgba(242,238,232,.04);
+    }
+
+    .signal {
+      color: var(--cream);
+      border-color: rgba(242,238,232,.28);
+      background: rgba(255,255,255,.045);
+      text-shadow: none;
+    }
+
+    .signal::before {
+      background: var(--red);
+      box-shadow: 0 0 14px rgba(229,9,20,.72);
+    }
+
+    .aka {
+      background: var(--cream);
+      color: #080606;
+      box-shadow: none;
+    }
+
+    .pill {
+      background: var(--cream);
+      color: #080606;
+      box-shadow: none;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(90deg, var(--redDark), var(--red), var(--red2));
+      color: white;
+    }
+
+    .media-panel .tab-btn.active {
+      background: linear-gradient(90deg, var(--redDark), var(--red), var(--red2));
+      color: white;
+    }
+
+    .price-card {
+      border-color: rgba(242,238,232,.22);
+      background:
+        linear-gradient(135deg, rgba(242,238,232,.08), rgba(229,9,20,.08)),
+        rgba(255,255,255,.04);
+    }
+
+    .price-card span {
+      color: var(--cream);
+    }
+
+    .section-title h2,
+    .block-title,
+    .page-title {
+      text-shadow: 4px 4px 0 rgba(229,9,20,.38);
+    }
+
+    .media-panel .section-title h2 {
+      color: #101010;
+      text-shadow: none;
+    }
+
+    .media-panel .pill {
+      background: #101010;
+      color: var(--cream);
+    }
+
+    .media-panel .slide-info h3 {
+      color: #101010;
+    }
+
+    .offer-item .pill,
+    .contact-card .pill,
+    .ticket .pill {
+      background: var(--red);
+      color: white;
+    }
+
+    .ticket::after {
+      background: repeating-linear-gradient(90deg, var(--cream) 0 2px, transparent 2px 5px);
+    }
+
+    .project-card {
+      background:
+        linear-gradient(180deg, transparent 28%, rgba(0,0,0,.82)),
+        radial-gradient(circle at 20% 14%, rgba(242,238,232,.12), transparent 28%),
+        linear-gradient(135deg, rgba(229,9,20,.78), rgba(3,3,3,.96));
+    }
+
+    .project-card.label {
+      background:
+        linear-gradient(180deg, transparent 28%, rgba(0,0,0,.82)),
+        radial-gradient(circle at 80% 16%, rgba(242,238,232,.13), transparent 28%),
+        linear-gradient(135deg, #160606, #4c0004 58%, #030303);
+    }
+
+    .project-card.culture {
+      background:
+        linear-gradient(180deg, transparent 28%, rgba(0,0,0,.84)),
+        radial-gradient(circle at 30% 15%, rgba(255,255,255,.14), transparent 30%),
+        linear-gradient(135deg, #030303, #e50914 54%, #180506);
+    }
+
+    .top-ticker {
+      background: linear-gradient(90deg, #090606, var(--redDark), var(--red));
+      color: var(--cream);
+    }
+
+    .brand-mark {
+      background: var(--cream);
+      color: #090606;
+    }
+
+    .btn-white {
+      background: var(--cream);
+      color: #090606;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--redDark), var(--red));
+    }
+
+    @media (max-width: 560px) {
+      h1 {
+        letter-spacing: -.015em;
+        text-shadow: 5px 5px 0 rgba(229,9,20,.72);
+      }
+
+      .profile-card {
+        padding: 18px;
+      }
+
+      .profile-img {
+        transform: scale(.98);
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V5: tabs por plataforma, slider Spartans, contacto legible
+    =============================== */
+
+    .tab-btn[data-tab="soundcloud"].active {
+      background: linear-gradient(90deg, #ff5500, #ff8a1c) !important;
+      color: white !important;
+    }
+
+    .tab-btn[data-tab="spotify"].active {
+      background: linear-gradient(90deg, #0f8f3a, #1ed760) !important;
+      color: #061106 !important;
+    }
+
+    .tab-btn[data-tab="proyectos"].active {
+      background: linear-gradient(90deg, #0b2f6b, #2f7dff) !important;
+      color: white !important;
+    }
+
+    .label-section-title {
+      margin-bottom: 24px;
+    }
+
+    .label-slider {
+      grid-auto-columns: minmax(360px, 620px);
+      align-items: stretch;
+    }
+
+    .label-slide {
+      min-height: 430px;
+      scroll-snap-align: start;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(229,9,20,.18), rgba(255,255,255,.045)),
+        rgba(0,0,0,.24);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .label-slide h3 {
+      font-family: var(--font-title);
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: .85;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+      margin: 18px 0 12px;
+      text-shadow: 4px 4px 0 rgba(229,9,20,.38);
+    }
+
+    .label-slide p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 520px;
+    }
+
+    .label-list {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .label-list li {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 13px;
+      color: var(--cream);
+      background: rgba(255,255,255,.04);
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .plan-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(255,255,255,.045);
+      min-height: 180px;
+    }
+
+    .plan-card.featured {
+      border-color: rgba(229,9,20,.55);
+      background: linear-gradient(180deg, rgba(229,9,20,.16), rgba(255,255,255,.04));
+    }
+
+    .plan-card small {
+      display: block;
+      color: var(--cream);
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .plan-card strong {
+      display: block;
+      font-family: var(--font-title);
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 400;
+      line-height: .9;
+      letter-spacing: -.02em;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .plan-card p {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .label-offer .sc-list,
+    .label-offer .label-soundcloud {
+      display: none !important;
+    }
+
+    .contact-zone {
+      padding-top: 36px;
+    }
+
+    .contact-zone .section-title {
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-zone .section-title h2 {
+      font-size: clamp(42px, 6vw, 88px);
+      line-height: .96;
+      letter-spacing: -.015em;
+      text-shadow: 4px 4px 0 rgba(229,9,20,.42);
+      max-width: 640px;
+    }
+
+    .contact-zone .section-title p {
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .contact-card strong {
+      font-family: var(--font-ui);
+      font-size: clamp(20px, 2.1vw, 31px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      text-transform: none;
+    }
+
+    .contact-card p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .contact-card .pill {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .label-slider {
+        grid-auto-columns: minmax(310px, 86vw);
+      }
+
+      .contact-zone .section-title h2 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .label-slide {
+        min-height: 430px;
+      }
+
+      .label-slide h3 {
+        font-size: clamp(42px, 16vw, 66px);
+      }
+
+      .contact-card strong {
+        font-size: 22px;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V6: contacto más limpio + slider full width automático
+    =============================== */
+
+    .label-slider {
+      grid-auto-columns: 100% !important;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .label-slide {
+      width: 100%;
+      min-height: 455px;
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      padding: clamp(24px, 4vw, 48px);
+    }
+
+    .label-slide h3 {
+      max-width: 760px;
+      font-size: clamp(58px, 8vw, 120px);
+      line-height: .84;
+      margin: 8px 0 8px;
+    }
+
+    .label-slide p {
+      max-width: 680px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .plans-slide {
+      align-content: center;
+    }
+
+    .plans-slide h3 {
+      margin-bottom: 22px;
+    }
+
+    .plans-grid {
+      width: 100%;
+      max-width: 980px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .plan-card {
+      min-height: 220px;
+      padding: 22px;
+    }
+
+    .plan-card strong {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: clamp(32px, 4vw, 56px);
+      letter-spacing: -.06em;
+    }
+
+    .label-list {
+      max-width: 760px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .label-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .label-slider::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, var(--red), var(--cream));
+    }
+
+    .contact-zone .section-title {
+      align-items: flex-start;
+      margin-bottom: 26px;
+    }
+
+    .contact-zone .section-title h2 {
+      font-family: var(--font-ui);
+      font-size: clamp(34px, 5vw, 72px);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -.05em;
+      text-shadow: none;
+      text-transform: uppercase;
+      max-width: 720px;
+    }
+
+    .contact-zone .section-title p {
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: #b8b1ad;
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 520px;
+    }
+
+    .contact-grid {
+      gap: 16px;
+    }
+
+    .contact-card {
+      padding: 22px;
+      min-height: 150px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)),
+        rgba(255,255,255,.035);
+    }
+
+    .contact-card strong {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: clamp(21px, 2vw, 29px);
+      line-height: 1.18;
+      letter-spacing: -.045em;
+      text-transform: none;
+      color: #f2eee8;
+      margin: 12px 0 10px;
+      text-shadow: none;
+    }
+
+    .contact-card p {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: #aaa29e;
+    }
+
+    .contact-card .pill {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      letter-spacing: .12em;
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 980px) {
+      .label-list {
+        grid-template-columns: 1fr;
+      }
+
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .label-slide h3 {
+        font-size: clamp(52px, 13vw, 92px);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .label-slide {
+        min-height: 520px;
+        padding: 22px;
+      }
+
+      .label-slide h3 {
+        font-size: clamp(44px, 15vw, 72px);
+      }
+
+      .label-slide p {
+        font-size: 15px;
+      }
+
+      .contact-zone .section-title h2 {
+        font-size: clamp(30px, 12vw, 48px);
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V7: distribución más limpia + segmentos + contacto con colores
+    =============================== */
+
+    .label-offer {
+      overflow: hidden;
+    }
+
+    .label-slide {
+      min-height: 430px !important;
+      align-content: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(229,9,20,.16), transparent 32%),
+        linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.02)),
+        rgba(0,0,0,.22);
+    }
+
+    .label-slide h3 {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: clamp(42px, 6.4vw, 88px) !important;
+      line-height: .92 !important;
+      letter-spacing: -.07em;
+      text-shadow: 4px 4px 0 rgba(229,9,20,.36);
+      max-width: 820px;
+    }
+
+    .label-slide p {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.62;
+      max-width: 650px;
+      color: #c4bbb7;
+    }
+
+    .label-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: 820px;
+    }
+
+    .label-list li {
+      white-space: normal;
+      line-height: 1.25;
+    }
+
+    .plans-slide h3 {
+      margin-bottom: 16px;
+    }
+
+    .plans-grid {
+      max-width: 980px;
+    }
+
+    .plan-card strong {
+      line-height: 1.02;
+      word-break: normal;
+    }
+
+    .label-dots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .label-dot {
+      height: 16px;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      background: rgba(255,255,255,.11);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .label-dot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 0%;
+      background: linear-gradient(90deg, var(--red), var(--cream));
+      transition: width .25s ease;
+    }
+
+    .label-dot.active::before {
+      width: 100%;
+    }
+
+    .label-dot span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 6px;
+      opacity: .95;
+    }
+
+    .contact-card[href*="wa.me"] {
+      border-color: rgba(37, 211, 102, .35);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(37,211,102,.18), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)),
+        rgba(255,255,255,.035);
+    }
+
+    .contact-card[href*="wa.me"]::before {
+      background: #25d366;
+    }
+
+    .contact-card[href*="instagram"] {
+      border-color: rgba(225,48,108,.38);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(225,48,108,.18), transparent 34%),
+        linear-gradient(135deg, rgba(131,58,180,.12), rgba(253,29,29,.08), rgba(252,176,69,.08)),
+        rgba(255,255,255,.035);
+    }
+
+    .contact-card[href*="instagram"]::before {
+      background: linear-gradient(180deg, #833ab4, #fd1d1d, #fcb045);
+    }
+
+    .contact-card[href^="mailto"] {
+      border-color: rgba(242,238,232,.32);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(242,238,232,.12), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)),
+        rgba(255,255,255,.035);
+    }
+
+    .contact-card[href^="mailto"]::before {
+      background: var(--cream);
+    }
+
+    .contact-card[href*="wa.me"] .pill {
+      background: #25d366;
+      color: #071107;
+    }
+
+    .contact-card[href*="instagram"] .pill {
+      background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+      color: white;
+    }
+
+    .contact-card[href^="mailto"] .pill {
+      background: var(--cream);
+      color: #090606;
+    }
+
+    .contact-card[href*="wa.me"]:hover {
+      border-color: rgba(37, 211, 102, .72);
+    }
+
+    .contact-card[href*="instagram"]:hover {
+      border-color: rgba(225,48,108,.72);
+    }
+
+    .contact-card[href^="mailto"]:hover {
+      border-color: rgba(242,238,232,.66);
+    }
+
+    @media (max-width: 980px) {
+      .label-list {
+        grid-template-columns: 1fr;
+      }
+
+      .label-slide h3 {
+        font-size: clamp(40px, 12vw, 76px) !important;
+        letter-spacing: -.05em;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .label-dots {
+        gap: 5px;
+      }
+
+      .label-dot {
+        height: 13px;
+      }
+
+      .label-slide {
+        min-height: 500px !important;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V8: slider de distribución integrado en una sola caja
+    =============================== */
+
+    .label-offer {
+      padding: clamp(26px, 4vw, 46px);
+    }
+
+    .label-offer .section-title {
+      margin-bottom: 10px;
+    }
+
+    .label-slider {
+      margin-top: 8px;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
+
+    .label-slide {
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: clamp(18px, 3vw, 36px) 0 clamp(22px, 3vw, 38px) !important;
+      min-height: 390px !important;
+      align-content: center;
+    }
+
+    .label-slide .pill {
+      max-width: 72%;
+    }
+
+    .label-slide h3 {
+      margin-top: 16px;
+    }
+
+    .plans-grid {
+      max-width: 100%;
+    }
+
+    .label-dots {
+      margin-top: 4px;
+      padding-top: 0;
+    }
+
+    .label-dot {
+      height: 12px;
+      background: rgba(255,255,255,.09);
+    }
+
+    .label-list {
+      max-width: 100%;
+    }
+
+    @media (max-width: 560px) {
+      .label-offer {
+        padding: 22px;
+      }
+
+      .label-slide {
+        min-height: 470px !important;
+      }
+
+      .label-slide .pill {
+        max-width: 100%;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V9: intro Spartans + alineación del encabezado
+    =============================== */
+
+    .label-offer .label-section-title,
+    .label-section-title {
+      display: block !important;
+      text-align: left !important;
+      margin-bottom: 28px !important;
+    }
+
+    .label-section-title h2 {
+      max-width: 560px;
+      line-height: .96 !important;
+      letter-spacing: -.025em;
+      margin-bottom: 14px;
+    }
+
+    .label-section-title p {
+      max-width: 640px !important;
+      margin: 0 !important;
+      text-align: left !important;
+      line-height: 1.55 !important;
+      color: #bdb5b0;
+    }
+
+    .label-intro-slide h3 {
+      max-width: 760px;
+    }
+
+    .label-intro-slide p {
+      max-width: 720px;
+      font-size: clamp(16px, 1.45vw, 19px);
+      color: #d1c9c4;
+    }
+
+    @media (max-width: 560px) {
+      .label-section-title h2 {
+        line-height: 1 !important;
+      }
+
+      .label-section-title p {
+        font-size: 14px;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V10: distribución por botones, no por autoplay
+    =============================== */
+
+    .label-offer {
+      padding: clamp(24px, 3.2vw, 38px) !important;
+    }
+
+    .label-section-title {
+      margin-bottom: 20px !important;
+    }
+
+    .label-section-title h2 {
+      line-height: 1.04 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .label-section-title p {
+      display: none !important;
+    }
+
+    .distribution-tabs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin: 10px 0 26px;
+    }
+
+    .distribution-tab {
+      min-height: 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.055);
+      color: var(--cream);
+      cursor: pointer;
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .distribution-tab:hover {
+      transform: translateY(-1px);
+      border-color: rgba(229,9,20,.65);
+    }
+
+    .distribution-tab.active {
+      background: linear-gradient(90deg, var(--redDark), var(--red));
+      color: white;
+      border-color: transparent;
+    }
+
+    .label-slider.distribution-content {
+      display: block !important;
+      overflow: visible !important;
+      margin: 0 !important;
+    }
+
+    .label-slide {
+      display: none !important;
+      min-height: 310px !important;
+      padding: 8px 0 0 !important;
+      animation: distributionFade .28s ease both;
+    }
+
+    .label-slide.active {
+      display: grid !important;
+    }
+
+    @keyframes distributionFade {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .label-slide h3 {
+      font-size: clamp(42px, 5.4vw, 78px) !important;
+      line-height: .94 !important;
+      margin: 10px 0 16px !important;
+      max-width: 820px;
+    }
+
+    .label-slide p {
+      max-width: 720px;
+      font-size: 16px;
+      line-height: 1.56;
+    }
+
+    .label-list {
+      margin-top: 22px;
+    }
+
+    .plans-grid {
+      margin-top: 12px;
+    }
+
+    .label-dots {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      .distribution-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .distribution-tab:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .distribution-tabs {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .distribution-tab:last-child {
+        grid-column: auto;
+      }
+
+      .label-slide {
+        min-height: auto !important;
+      }
+
+      .label-slide h3 {
+        font-size: clamp(38px, 13vw, 64px) !important;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V11: distribución ordenada, sin sombras, tabs funcionales
+    =============================== */
+
+    .label-offer {
+      padding: clamp(26px, 4vw, 48px) !important;
+    }
+
+    .label-section-title,
+    .label-offer .section-title {
+      display: block !important;
+      text-align: left !important;
+      margin-bottom: 28px !important;
+    }
+
+    .label-section-title h2 {
+      max-width: none !important;
+      width: 100% !important;
+      line-height: 1.08 !important;
+      letter-spacing: -.018em !important;
+      margin: 0 !important;
+      text-shadow: none !important;
+    }
+
+    .label-offer h2,
+    .label-offer h3 {
+      text-shadow: none !important;
+    }
+
+    .distribution-tabs {
+      margin: 0 0 34px !important;
+    }
+
+    .label-slider.distribution-content {
+      display: block !important;
+      overflow: visible !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .label-slide {
+      display: none !important;
+      min-height: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      justify-items: start !important;
+      align-content: start !important;
+      animation: distributionFade .24s ease both;
+    }
+
+    .label-slide.active {
+      display: grid !important;
+    }
+
+    .label-slide > .pill {
+      display: none !important;
+    }
+
+    .label-slide h3 {
+      font-family: var(--font-ui) !important;
+      font-weight: 700 !important;
+      font-size: clamp(42px, 6vw, 82px) !important;
+      line-height: .98 !important;
+      letter-spacing: -.075em !important;
+      max-width: 980px !important;
+      margin: 0 0 22px !important;
+      text-align: left !important;
+      text-shadow: none !important;
+    }
+
+    .label-slide p {
+      max-width: 850px !important;
+      margin: 0 0 22px !important;
+      text-align: left !important;
+      font-size: clamp(16px, 1.25vw, 18px) !important;
+      line-height: 1.6 !important;
+      color: #cfc7c2 !important;
+    }
+
+    .label-slide .actions {
+      justify-content: flex-start !important;
+      margin-top: 0 !important;
+    }
+
+    .plans-slide h3 {
+      margin-bottom: 24px !important;
+    }
+
+    .plans-grid {
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+
+    .label-list {
+      width: 100% !important;
+      max-width: 1000px !important;
+      margin-top: 8px !important;
+    }
+
+    .price-card {
+      margin-left: 0 !important;
+    }
+
+    @keyframes distributionFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .distribution-tabs {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .distribution-tab:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .label-section-title h2 {
+        font-size: clamp(40px, 14vw, 66px) !important;
+      }
+
+      .distribution-tabs {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .distribution-tab:last-child {
+        grid-column: auto;
+      }
+
+      .label-slide h3 {
+        font-size: clamp(34px, 11vw, 54px) !important;
+        letter-spacing: -.055em !important;
+      }
+
+      .plans-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V12: distribución reconstruida
+    =============================== */
+
+    .dist-zone {
+      padding: clamp(28px, 4vw, 48px) !important;
+      min-height: 620px;
+    }
+
+    .dist-heading h2 {
+      font-family: var(--font-title);
+      font-size: clamp(54px, 7vw, 104px);
+      line-height: 1.05;
+      letter-spacing: -.012em;
+      margin: 0 0 28px;
+      text-shadow: none !important;
+    }
+
+    .dist-tabs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .dist-tab {
+      min-height: 54px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.055);
+      color: var(--cream);
+      cursor: pointer;
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .dist-tab:hover {
+      transform: translateY(-1px);
+      border-color: rgba(229,9,20,.65);
+    }
+
+    .dist-tab.active {
+      background: linear-gradient(90deg, var(--redDark), var(--red));
+      color: white;
+      border-color: transparent;
+    }
+
+    .dist-panels {
+      min-height: 380px;
+    }
+
+    .dist-panel {
+      display: none;
+      min-height: 380px;
+      animation: distFade .22s ease both;
+    }
+
+    .dist-panel.active {
+      display: grid;
+    }
+
+    .dist-panel-split {
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 34%);
+      gap: clamp(24px, 5vw, 70px);
+      align-items: center;
+    }
+
+    .dist-copy {
+      max-width: 870px;
+      text-align: left;
+      justify-self: start;
+    }
+
+    .dist-copy h3 {
+      font-family: var(--font-ui);
+      font-size: clamp(42px, 5.7vw, 82px);
+      line-height: .96;
+      letter-spacing: -.075em;
+      margin: 0 0 24px;
+      text-shadow: none !important;
+      text-transform: uppercase;
+    }
+
+    .dist-copy p {
+      max-width: 850px;
+      margin: 0 0 24px;
+      color: #d2cbc7;
+      font-size: clamp(16px, 1.35vw, 19px);
+      line-height: 1.6;
+    }
+
+    .dist-copy .actions {
+      justify-content: flex-start;
+      margin-top: 8px;
+    }
+
+    .dist-visual {
+      min-height: 360px;
+      border-radius: 4px;
+      background:
+        radial-gradient(circle at 50% 32%, rgba(229,9,20,.16), transparent 42%),
+        linear-gradient(135deg, rgba(255,255,255,.045), rgba(0,0,0,.55)),
+        #050505;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      opacity: .92;
+    }
+
+    .dist-visual span {
+      font-family: var(--font-title);
+      color: rgba(255,255,255,.05);
+      font-size: clamp(56px, 6vw, 100px);
+      line-height: .85;
+      text-align: center;
+      transform: rotate(-5deg);
+    }
+
+    .dist-plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      min-height: 230px;
+    }
+
+    .dist-plan {
+      display: block;
+      text-decoration: none;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.16);
+      min-height: 230px;
+      color: var(--white);
+      transition: transform .18s ease, border-color .18s ease, filter .18s ease;
+    }
+
+    .dist-plan:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+    }
+
+    .dist-plan small {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .dist-plan strong {
+      display: block;
+      font-family: var(--font-ui);
+      font-weight: 800;
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1;
+      letter-spacing: -.07em;
+      margin-bottom: 16px;
+    }
+
+    .dist-plan p {
+      color: rgba(255,255,255,.78);
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+
+    .dist-plan-free {
+      background:
+        radial-gradient(circle at 22% 18%, rgba(255,255,255,.2), transparent 34%),
+        linear-gradient(135deg, #1877f2, #0a3f93);
+      border-color: rgba(24,119,242,.65);
+    }
+
+    .dist-plan-base {
+      position: relative;
+      background:
+        radial-gradient(circle at 20% 14%, rgba(255,255,255,.18), transparent 36%),
+        linear-gradient(135deg, #d90416, #730008);
+      border-color: rgba(229,9,20,.85);
+      box-shadow: 0 22px 70px rgba(229,9,20,.16);
+    }
+
+    .dist-plan-base::after {
+      content: "★";
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      color: #fff2c7;
+      font-size: 24px;
+    }
+
+    .dist-plan-pro {
+      background:
+        radial-gradient(circle at 22% 18%, rgba(255,255,255,.16), transparent 34%),
+        linear-gradient(135deg, #241313, #f2eee8);
+      color: #14100e;
+      border-color: rgba(242,238,232,.7);
+    }
+
+    .dist-plan-pro p,
+    .dist-plan-pro small,
+    .dist-plan-pro strong {
+      color: #14100e;
+    }
+
+    .dist-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .dist-feature {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 20px;
+      padding: 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)),
+        rgba(255,255,255,.03);
+      min-height: 180px;
+    }
+
+    .dist-feature span {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .dist-feature strong {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 18px;
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .dist-feature p {
+      color: #aaa29e;
+      line-height: 1.48;
+      font-size: 13.5px;
+    }
+
+    @keyframes distFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 980px) {
+      .dist-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dist-tab:last-child {
+        grid-column: span 2;
+      }
+
+      .dist-panel-split {
+        grid-template-columns: 1fr;
+      }
+
+      .dist-visual {
+        display: none;
+      }
+
+      .dist-plans,
+      .dist-feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dist-panels,
+      .dist-panel {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .dist-zone {
+        min-height: auto;
+        padding: 22px !important;
+      }
+
+      .dist-heading h2 {
+        font-size: clamp(42px, 13vw, 64px);
+      }
+
+      .dist-tabs {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .dist-tab:last-child {
+        grid-column: auto;
+      }
+
+      .dist-copy h3 {
+        font-size: clamp(34px, 11vw, 52px);
+        letter-spacing: -.055em;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V13: título igual a Videos Educativos + fix tabs
+    =============================== */
+
+    .dist-heading h2 {
+      font-size: clamp(34px, 5.6vw, 78px) !important;
+      line-height: .86 !important;
+      letter-spacing: -.07em !important;
+      text-shadow: none !important;
+      max-width: none !important;
+      width: 100% !important;
+      margin: 0 0 28px !important;
+    }
+
+    .dist-zone {
+      min-height: 0 !important;
+    }
+
+    .dist-panels {
+      min-height: 360px !important;
+    }
+
+    .dist-panel {
+      min-height: 360px !important;
+    }
+
+    .dist-panel.active {
+      display: grid !important;
+    }
+
+    .dist-panel:not(.active) {
+      display: none !important;
+    }
+
+    .dist-panel-split {
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 34%) !important;
+    }
+
+    .dist-copy {
+      justify-self: start !important;
+      text-align: left !important;
+      max-width: 870px !important;
+    }
+
+    .dist-copy h3,
+    .dist-copy p,
+    .dist-copy .actions {
+      text-align: left !important;
+      margin-left: 0 !important;
+    }
+
+    .dist-copy .actions {
+      justify-content: flex-start !important;
+    }
+
+    @media (max-width: 980px) {
+      .dist-panel-split {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .dist-heading h2 {
+        font-size: clamp(34px, 13vw, 58px) !important;
+        line-height: .92 !important;
+      }
+
+      .dist-panels,
+      .dist-panel {
+        min-height: auto !important;
+      }
+    }
+
+  
+    /* ===============================
+      AJUSTE V14: consolidación visual distribución
+      - título equivalente a Videos Educativos
+      - tabs alineados a izquierda
+      - paneles ordenados y de altura pareja
+    =============================== */
+
+    .dist-zone {
+      width: min(1180px, calc(100% - 36px));
+      margin-left: auto;
+      margin-right: auto;
+      padding: clamp(28px, 4vw, 48px) !important;
+      min-height: 0 !important;
+    }
+
+    .dist-heading {
+      width: 100%;
+      display: block;
+      margin: 0 0 28px !important;
+      text-align: left !important;
+    }
+
+    .dist-heading h2 {
+      font-family: var(--font-title) !important;
+      font-size: clamp(34px, 5.6vw, 78px) !important;
+      font-weight: 400 !important;
+      line-height: .86 !important;
+      letter-spacing: -.015em !important;
+      text-transform: uppercase !important;
+      text-align: left !important;
+      max-width: none !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-shadow: none !important;
+      color: var(--white) !important;
+    }
+
+    .dist-tabs {
+      width: 100% !important;
+      display: grid !important;
+      grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      gap: 10px !important;
+      margin: 0 0 34px !important;
+      padding: 0 !important;
+      justify-content: start !important;
+      justify-items: stretch !important;
+      align-items: stretch !important;
+    }
+
+    .dist-tab {
+      width: 100% !important;
+      min-height: 54px !important;
+      margin: 0 !important;
+      border-radius: 16px !important;
+      font-family: var(--font-ui) !important;
+      font-size: 12px !important;
+      font-weight: 800 !important;
+      letter-spacing: .08em !important;
+      text-transform: uppercase !important;
+    }
+
+    .dist-panels {
+      width: 100% !important;
+      min-height: 370px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .dist-panel {
+      width: 100% !important;
+      min-height: 370px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      justify-items: start !important;
+      align-items: center !important;
+    }
+
+    .dist-panel.active {
+      display: grid !important;
+    }
+
+    .dist-panel:not(.active) {
+      display: none !important;
+    }
+
+    .dist-panel-split {
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 32%) !important;
+      gap: clamp(24px, 5vw, 64px) !important;
+    }
+
+    .dist-copy {
+      width: 100% !important;
+      max-width: 900px !important;
+      justify-self: start !important;
+      text-align: left !important;
+      margin: 0 !important;
+    }
+
+    .dist-copy h3 {
+      font-family: var(--font-ui) !important;
+      font-size: clamp(40px, 5.25vw, 76px) !important;
+      line-height: .98 !important;
+      letter-spacing: -.07em !important;
+      text-align: left !important;
+      text-shadow: none !important;
+      margin: 0 0 22px !important;
+      padding: 0 !important;
+      max-width: 930px !important;
+      color: var(--white) !important;
+    }
+
+    .dist-copy p {
+      max-width: 860px !important;
+      margin: 0 0 24px !important;
+      text-align: left !important;
+      color: #d2cbc7 !important;
+      font-size: clamp(16px, 1.28vw, 18px) !important;
+      line-height: 1.58 !important;
+    }
+
+    .dist-copy .actions {
+      justify-content: flex-start !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .dist-visual {
+      justify-self: end !important;
+      width: 100% !important;
+      min-height: 340px !important;
+    }
+
+    .dist-plans,
+    .dist-feature-grid {
+      width: 100% !important;
+    }
+
+    @media (max-width: 980px) {
+      .dist-tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .dist-tab:last-child {
+        grid-column: span 2 !important;
+      }
+
+      .dist-panel-split {
+        grid-template-columns: 1fr !important;
+      }
+
+      .dist-visual {
+        display: none !important;
+      }
+
+      .dist-plans,
+      .dist-feature-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .dist-panels,
+      .dist-panel {
+        min-height: auto !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .dist-zone {
+        width: min(100% - 22px, 1180px);
+        padding: 22px !important;
+      }
+
+      .dist-heading h2 {
+        font-size: clamp(34px, 13vw, 58px) !important;
+        line-height: .92 !important;
+      }
+
+      .dist-tabs {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .dist-tab:last-child {
+        grid-column: auto !important;
+      }
+
+      .dist-copy h3 {
+        font-size: clamp(34px, 11vw, 54px) !important;
+        letter-spacing: -.055em !important;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+
+  <div class="top-ticker" aria-label="Novedades">
+    <div class="ticker-track">
+      <span>DISTRIBUCIÓN DIGITAL · ASESORAMIENTO PARA ARTISTAS · ENVIÁ TU TRACK · PRÓXIMO EVENTO 04 DE JULIO EN LAFERRERE · ENTRADAS 3X1 · OTRA NOCHE · SPARTANS LABEL · BASS MUSIC CULTURE · </span>
+      <span aria-hidden="true">DISTRIBUCIÓN DIGITAL · ASESORAMIENTO PARA ARTISTAS · ENVIÁ TU TRACK · PRÓXIMO EVENTO 04 DE JULIO EN LAFERRERE · ENTRADAS 3X1 · OTRA NOCHE · SPARTANS LABEL · BASS MUSIC CULTURE · </span>
+    </div>
+  </div>
   <header class="topbar">
     <div class="container nav">
       <a href="#" class="brand nav-btn-page" data-page="inicio">
@@ -911,7 +2920,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <section class="hero-copy" aria-label="Presentación">
-          <div class="signal">Signal online</div>
+          <div class="signal">DJ · Productor · Promotor</div>
 
           <h1>ALLEN<br>KS</h1>
 
@@ -936,7 +2945,7 @@
 
     <section id="contenidos" class="content">
       <div class="container">
-        <div class="panel">
+        <div class="panel media-panel">
           <div class="tabs-head" role="tablist" aria-label="Contenido de Allen KS">
             <button class="tab-btn active" data-tab="youtube" type="button">Videos educativos</button>
             <button class="tab-btn" data-tab="soundcloud" type="button">SoundCloud</button>
@@ -1100,57 +3109,146 @@
           </div>
         </div>
 
+
         <div class="home-extra">
-          <section class="section-box">
-            <div class="split">
-              <div>
-                <div class="signal">Spartans Label</div>
-                <h2 class="block-title">Distribuí<br>con nosotros</h2>
-                <p class="copy">
-                  <strong>Spartans Label</strong> es un espacio independiente para productores con identidad, sonido propio y visión de crecimiento. Trabajamos lanzamientos, difusión, estética visual y acompañamiento para que cada track salga con una presentación más sólida.
-                </p>
 
-                <div class="actions">
-                  <button class="btn btn-primary nav-btn-page" data-page="spartans" type="button">Ver Spartans</button>
-                  <a class="btn btn-white" href="https://soundcloud.com/spartanslabel" target="_blank" rel="noopener">SoundCloud</a>
-                </div>
-              </div>
+          <section class="section-box dist-zone" id="distribucion">
+            <div class="dist-heading">
+              <h2>DISTRIBUÍ CON NOSOTROS</h2>
+            </div>
 
-              <div class="sc-list">
-                <div class="sc-item">
-                  <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2032825836&color=%23e50914&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div class="embed-credit"><a href="https://soundcloud.com/spartanslabel" title="⚔️ 𝐒𝐏𝐀𝐑𝐓𝐀𝐍𝐒 𝐋𝐀𝐁𝐄𝐋 ⚔️" target="_blank">⚔️ 𝐒𝐏𝐀𝐑𝐓𝐀𝐍𝐒 𝐋𝐀𝐁𝐄𝐋 ⚔️</a> · <a href="https://soundcloud.com/spartanslabel/welcome" title="WELCOME" target="_blank">WELCOME</a></div>
+            <div class="dist-tabs" aria-label="Opciones de distribución">
+              <button type="button" class="dist-tab active" data-dist-panel="0">Sello</button>
+              <button type="button" class="dist-tab" data-dist-panel="1">Planes</button>
+              <button type="button" class="dist-tab" data-dist-panel="2">Lanzamiento</button>
+              <button type="button" class="dist-tab" data-dist-panel="3">Imagen</button>
+              <button type="button" class="dist-tab" data-dist-panel="4">Seguimiento</button>
+            </div>
+
+            <div class="dist-panels">
+              <article class="dist-panel dist-panel-split active">
+                <div class="dist-copy">
+                  <h3>Sello virtual<br>de Bass Music</h3>
+                  <p>
+                    Spartans Label banca a productores nacionales de Dubstep, Drum & Bass, Riddim y sonidos pesados.
+                    Distribución digital, estética visual y acompañamiento para que cada lanzamiento salga con más presencia.
+                  </p>
+                  <div class="actions">
+                    <a class="btn btn-primary" href="mailto:contacto@allenks.com.ar?subject=Enviar%20track%20-%20Spartans%20Label&body=Nombre%3A%0AInstagram%3A%0ALink%20del%20track%3A%0AG%C3%A9nero%3A%0AMensaje%3A" target="_blank" rel="noopener">Enviar track</a>
+                    <a class="btn btn-white" href="https://instagram.com/spartanslabel" target="_blank" rel="noopener">Spartans Label</a>
+                  </div>
                 </div>
-              </div>
+                <div class="dist-visual" aria-hidden="true">
+                  <span>SPARTANS<br>LABEL</span>
+                </div>
+              </article>
+
+              <article class="dist-panel">
+                <div class="dist-copy">
+                  <h3>Planes<br>mensuales</h3>
+                  <p>Opciones simples para artistas que quieren empezar a ordenar sus lanzamientos sin perder identidad.</p>
+                </div>
+
+                <div class="dist-plans">
+                  <a class="dist-plan dist-plan-free" href="mailto:contacto@allenks.com.ar?subject=Plan%20Artista%20Gratis%20-%20Spartans%20Label" target="_blank" rel="noopener">
+                    <small>Plan artista</small>
+                    <strong>Gratis</strong>
+                    <p>Solo para artistas del sello. Distribución de hasta 1 tema por mes.</p>
+                  </a>
+
+                  <a class="dist-plan dist-plan-base" href="mailto:contacto@allenks.com.ar?subject=Plan%20Base%20%2415.000%20-%20Spartans%20Label" target="_blank" rel="noopener">
+                    <small>Plan destacado ★</small>
+                    <strong>$15.000</strong>
+                    <p>Distribución + revisión de datos + asistencia básica de lanzamiento.</p>
+                  </a>
+
+                  <a class="dist-plan dist-plan-pro" href="https://wa.me/5491136133976?text=Hola%20Allen%2C%20quiero%20consultar%20por%20el%20Plan%20Pro%20de%20Spartans%20Label." target="_blank" rel="noopener">
+                    <small>Plan pro</small>
+                    <strong>Consultar</strong>
+                    <p>Diseño, calendario, estrategia y acompañamiento más completo.</p>
+                  </a>
+                </div>
+              </article>
+
+              <article class="dist-panel">
+                <div class="dist-copy">
+                  <h3>Distribución<br>digital ordenada</h3>
+                  <p>
+                    Trabajamos con flujo de distribución vía SoundCloud for Artists para preparar el lanzamiento antes de enviarlo a plataformas.
+                  </p>
+                </div>
+
+                <div class="dist-feature-grid">
+                  <div class="dist-feature"><span>01</span><strong>50+ plataformas</strong><p>Spotify, Apple Music, TikTok, YouTube Music, Amazon, Deezer y más tiendas digitales.</p></div>
+                  <div class="dist-feature"><span>02</span><strong>Metadata e ISRC</strong><p>Título, artista, compositores, sello, portada, género, fecha, preview para TikTok/Instagram e ISRC.</p></div>
+                  <div class="dist-feature"><span>03</span><strong>Tiempos claros</strong><p>Spotify suele tardar 2–3 días hábiles; TikTok 5–7; otras plataformas pueden tomar 1–3 semanas.</p></div>
+                  <div class="dist-feature"><span>04</span><strong>Salida planificada</strong><p>Conviene preparar el lanzamiento con 4 semanas o más para revisión, pitch y calendario de difusión.</p></div>
+                </div>
+              </article>
+
+              <article class="dist-panel">
+                <div class="dist-copy">
+                  <h3>Imagen<br>y difusión</h3>
+                  <p>
+                    Armamos una presentación visual más fuerte para que el lanzamiento no salga crudo ni improvisado.
+                  </p>
+                </div>
+
+                <div class="dist-feature-grid">
+                  <div class="dist-feature"><span>01</span><strong>Artistas e ilustradores</strong><p>Buscamos una estética moderna, con portadas y piezas pensadas para la identidad del artista.</p></div>
+                  <div class="dist-feature"><span>02</span><strong>IA asistida</strong><p>Usamos inteligencia artificial como herramienta creativa, con criterio, retoque y dirección visual humana.</p></div>
+                  <div class="dist-feature"><span>03</span><strong>Photoshop y retoque</strong><p>Mejora de fotos, corrección de color, recortes, limpieza, composición y adaptación para redes.</p></div>
+                  <div class="dist-feature"><span>04</span><strong>Contenido para redes</strong><p>Flyer, portada, historias, copy de lanzamiento y material para anunciar el track con más presencia.</p></div>
+                </div>
+              </article>
+
+              <article class="dist-panel">
+                <div class="dist-copy">
+                  <h3>Seguimiento<br>del artista</h3>
+                  <p>
+                    Después de subir el tema, seguimos trabajando el movimiento del lanzamiento para que no muera al primer posteo.
+                  </p>
+                </div>
+
+                <div class="dist-feature-grid">
+                  <div class="dist-feature"><span>01</span><strong>Calendario de salida</strong><p>Ordenamos fechas, posteos, recordatorios, historias, reels y momentos clave.</p></div>
+                  <div class="dist-feature"><span>02</span><strong>Perfil más serio</strong><p>Revisión de bio, links, estética, portadas, orden visual y presencia general del artista.</p></div>
+                  <div class="dist-feature"><span>03</span><strong>Comunicación</strong><p>Copies, frases, enfoque del lanzamiento y forma de contar el proyecto sin sonar genérico.</p></div>
+                  <div class="dist-feature"><span>04</span><strong>Próximo paso</strong><p>Pensamos qué viene después: otro single, visualizer, remix, colaboración, playlist o campaña.</p></div>
+                </div>
+              </article>
             </div>
           </section>
 
-          <section class="section-box">
+
+          <section class="section-box contact-zone" id="contacto">
             <div class="section-title">
-              <h2>Servicios activos</h2>
-              <p>Accesos rápidos para lo que querés ofrecer sin saturar el inicio.</p>
+              <h2>Contacto & Booking</h2>
+              <p>Para fechas, asesoramiento, lanzamientos, eventos, colaboraciones o consultas por Allen KS / Dubstep Wacho.</p>
             </div>
 
-            <div class="ticket-grid">
-              <article class="ticket">
-                <span class="pill">Label</span>
-                <h3>Enviar track</h3>
-                <p>Para productores que buscan feedback, distribución, estética visual y acompañamiento.</p>
-              </article>
+            <div class="contact-grid">
+              <a class="contact-card" href="https://wa.me/5491136133976" target="_blank" rel="noopener">
+                <span class="pill">WhatsApp</span>
+                <strong>+54 9 11 3613-3976</strong>
+                <p>Contacto directo para contrataciones, eventos y consultas rápidas.</p>
+              </a>
 
-              <article class="ticket">
-                <span class="pill">Asesoría</span>
-                <h3>Llamado gratis</h3>
-                <p>30 minutos para revisar redes, música, lanzamientos, diseño o estrategia.</p>
-              </article>
+              <a class="contact-card" href="https://instagram.com/dubstepwacho" target="_blank" rel="noopener">
+                <span class="pill">Instagram</span>
+                <strong>@dubstepwacho</strong>
+                <p>Contenido, comunidad, música, eventos y novedades.</p>
+              </a>
 
-              <article class="ticket">
-                <span class="pill">Evento</span>
-                <h3>Otra Noche</h3>
-                <p>Fiesta, comunidad, sorteos, lineups, convocatorias y cultura bass.</p>
-              </article>
+              <a class="contact-card" href="mailto:contacto@allenks.com.ar" target="_blank" rel="noopener">
+                <span class="pill">Email</span>
+                <strong>contacto@allenks.com.ar</strong>
+                <p>Para propuestas formales, prensa, marcas o coordinación de proyectos.</p>
+              </a>
             </div>
           </section>
         </div>
+
       </div>
     </section>
   </main>
@@ -1217,8 +3315,14 @@
             <div>
               <h2 class="block-title">Tu track<br>más sólido</h2>
               <p class="copy">
-                Te ayudamos a preparar lanzamientos con criterio: distribución digital, estética visual, revisión de datos, difusión, feedback y acompañamiento. El objetivo no es solo subir música, sino presentarla mejor.
+                Plan mensual para artistas y productores: distribución digital, revisión de datos, estética visual, difusión básica y seguimiento.
               </p>
+
+              <div class="price-card">
+                <span>Spartans Label</span>
+                <strong>$15.000</strong>
+                <small>Por mes · asistencia de lanzamiento + distribución + seguimiento básico.</small>
+              </div>
 
               <div class="feature-grid" style="grid-template-columns: 1fr 1fr;">
                 <div class="feature"><strong>Distribución</strong><span>Asistencia para subir música y ordenar perfiles.</span></div>
@@ -1228,7 +3332,7 @@
               </div>
 
               <div class="actions" style="margin-top: 22px;">
-                <a class="btn btn-primary" href="https://instagram.com/spartanslabel" target="_blank" rel="noopener">Enviar mi track</a>
+                <a class="btn btn-primary" href="mailto:contacto@allenks.com.ar?subject=Enviar%20track%20-%20Spartans%20Label&body=Nombre%3A%0AInstagram%3A%0ALink%20del%20track%3A%0AG%C3%A9nero%3A%0AMensaje%3A" target="_blank" rel="noopener">Enviar mi track</a>
                 <a class="btn btn-white" href="https://soundcloud.com/spartanslabel" target="_blank" rel="noopener">Ver SoundCloud</a>
               </div>
             </div>
@@ -1283,7 +3387,7 @@
           </div>
 
           <div class="actions" style="margin-top: 22px;">
-            <a class="btn btn-primary" href="https://instagram.com/dubstepwacho" target="_blank" rel="noopener">Coordinar llamado gratis</a>
+            <a class="btn btn-primary" href="https://wa.me/5491136133976?text=Hola%20Allen%2C%20quiero%20coordinar%20el%20llamado%20gratis%20de%2030%20minutos%20para%20asesoramiento." target="_blank" rel="noopener">Coordinar llamado gratis</a>
           </div>
         </div>
       </div>
@@ -1411,11 +3515,36 @@
         document.getElementById(tab).classList.add("active");
       });
     });
-
-    const startHash = window.location.hash.replace("#", "");
+const startHash = window.location.hash.replace("#", "");
     if (startHash && document.getElementById(startHash) && document.getElementById(startHash).classList.contains("page")) {
       showPage(startHash);
     }
+</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const distTabs = Array.from(document.querySelectorAll(".dist-tab"));
+      const distPanels = Array.from(document.querySelectorAll(".dist-panel"));
+
+      function showDistPanel(index) {
+        distTabs.forEach((tab, tabIndex) => {
+          tab.classList.toggle("active", tabIndex === index);
+        });
+
+        distPanels.forEach((panel, panelIndex) => {
+          panel.classList.toggle("active", panelIndex === index);
+        });
+      }
+
+      distTabs.forEach((tab, index) => {
+        tab.addEventListener("click", function () {
+          showDistPanel(index);
+        });
+      });
+
+      showDistPanel(0);
+    });
   </script>
+
 </body>
 </html>
